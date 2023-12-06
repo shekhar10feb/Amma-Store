@@ -1,0 +1,54 @@
+* {
+  background-color: black;
+}
+
+.poster-img {
+  width: clamp(300px, 50%, 370px);
+  max-height: 92vh;
+  object-fit: cover;
+}
+
+article {
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+article.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+article.lastSlide {
+  transform: translateX(-100%);
+}
+
+article.nextSlide {
+  transform: translateX(100%);
+}
+
+.styleActiveScreen {
+  margin: auto 0.5rem;
+  padding: 0.5rem 0.4rem;
+  background-color: white;
+  color: black;
+}
+
+.styleInactiveScreen {
+  margin: auto 0.5rem;
+  padding: 0.5rem 0.4rem;
+  background-color: black;
+  color: white;
+}
+
+.styleInactiveScreen:hover {
+  background-color: white;
+  color: black;
+}
